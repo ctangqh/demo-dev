@@ -5,7 +5,7 @@ let Memcached = require('memcached')
 let UUID = require('uuid');
 let app = express();
 let port = process.env.PORT || 3000;
-let memcached_host = "192.168.2.249" || process.env.MEMCACHED_SERVER;
+let memcached_host = "192.168.2.249:11211" || process.env.MEMCACHED_SERVER;
 let rwRate = 10 || process.env.RATE;
 
 app.get('/', async (req, res) => {
